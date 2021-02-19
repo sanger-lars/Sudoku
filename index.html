@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="plade">
+      <div class="rude --blue" id="R1">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --red" id="R2">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --blue" id="R3">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --red" id="R4">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --blue" id="R5">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --red" id="R6">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --blue" id="R7">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --red" id="R8">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+      <div class="rude --blue" id="R9">
+        <div class="felt" id="F1">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F2">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F3">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F4">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F5">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F6">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F7">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F8">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+        <div class="felt" id="F9">
+          <span class="s tom">0</span>
+          <span class="s">1</span>
+          <span class="s">2</span>
+          <span class="s">3</span>
+          <span class="s">4</span>
+          <span class="L"></span><br />
+          <span class="s">5</span>
+          <span class="s">6</span>
+          <span class="s">7</span>
+          <span class="s">8</span>
+          <span class="s">9</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu">
+      <button id="clear">Clear</button>
+      <button id="undo-knap">Undo</button>
+      <button id="forward-knap">>>>>></button><span id="uNr"></span>
+      <br />
+      <button id="mark-knap">Mærk possition</button>
+      <button id="help-knap">Hint</button>
+      <div class="bookmarks"></div>
+      <button id="link-knap">Lav bookmark-link</button>
+    </div>
+
+    <script src="help.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

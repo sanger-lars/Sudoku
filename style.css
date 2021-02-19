@@ -1,0 +1,118 @@
+.--blue {
+  border: 1px solid blue;
+}
+
+.--blue .felt {
+  border: 1px solid blue;
+}
+
+.--red {
+  border: 1px solid red;
+}
+
+.--red .felt {
+  border: 1px solid red;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.plade {
+  width: 500px;
+  height: 470px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.plade:hover {
+  cursor: pointer;
+}
+
+.rude {
+  width: 156px;
+  height: 154px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.felt {
+  width: 50px;
+  height: 50px;
+  // border: 1px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.s {
+  font-size: x-small;
+  width: 9px;
+  text-align: center;
+}
+
+.s:hover {
+  background-color: aqua;
+}
+
+.L:hover {
+  background-color: aqua;
+}
+
+.tom {
+  display: none;
+}
+
+.skjul {
+  visibility: hidden;
+}
+
+.L {
+  width: 50px;
+  font-size: large;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#uNr {
+  font-size: larger;
+  margin-left: 20px;
+}
+
+.bookmarks {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#help-knap {
+  margin-left: 8vh;
+}
+
+#link-knap {
+  margin-top: 130px;
+}
+
+.mark {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: small;
+  background-color: aqua;
+  height: 30px;
+  width: 30px;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding-top: 10px;
+  text-align: center;
+}
+.mark:hover {
+  cursor: pointer;
+  background-color: aquamarine;
+}
+
+.green {
+  background-color: lightgreen;
+}
